@@ -1,5 +1,6 @@
-let a = 1;
-let b = 2;
-[a, b] = [b, a];
-console.log(a);
-console.log(b);
+var http = require('http');
+
+http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/html'});
+  res.end('Hello World!');
+}).listen(8080);

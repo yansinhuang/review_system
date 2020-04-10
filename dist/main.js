@@ -1,10 +1,8 @@
-"use strict";
+'use strict';
 
-var a = 1;
-var b = 2;
-var _ref = [b, a];
-a = _ref[0];
-b = _ref[1];
+var http = require('http');
 
-console.log(a);
-console.log(b);
+http.createServer(function (req, res) {
+  res.writeHead(200, { 'Content-Type': 'text/html' });
+  res.end('Hello World!');
+}).listen(8080);
